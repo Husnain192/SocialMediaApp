@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "vercel-build": "npm install && cp -a routes/ models/ config/ middleware/ public/ images/ ./ || true"
   },
   "author": "",
   "license": "ISC",
