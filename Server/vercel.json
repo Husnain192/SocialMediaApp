@@ -2,19 +2,40 @@
   "version": 2,
   "builds": [
     {
-      "src": "Server/index.js",
+      "src": "index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "Server/index.js"
+      "dest": "index.js"
     }
   ],
-  "includeFiles": [
-    "Server/routes/**",
-    "Server/models/**",
-    "Server/config/**"
+  "rewrites": [
+    {
+      "source": "/auth/(.*)",
+      "destination": "index.js"
+    },
+    {
+      "source": "/user/(.*)",
+      "destination": "index.js"
+    },
+    {
+      "source": "/posts/(.*)",
+      "destination": "index.js"
+    },
+    {
+      "source": "/upload/(.*)",
+      "destination": "index.js"
+    },
+    {
+      "source": "/chat/(.*)",
+      "destination": "index.js"
+    },
+    {
+      "source": "/message/(.*)",
+      "destination": "index.js"
+    }
   ]
 }
