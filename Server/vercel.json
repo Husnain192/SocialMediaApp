@@ -1,41 +1,43 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "index.js",
-            "use": "@vercel/node"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "index.js"
-        }
-    ],
-    "rewrites": [
-        {
-            "source": "/auth/(.*)",
-            "destination": "index.js"
-        },
-        {
-            "source": "/user/(.*)",
-            "destination": "index.js"
-        },
-        {
-            "source": "/posts/(.*)",
-            "destination": "index.js"
-        },
-        {
-            "source": "/upload/(.*)",
-            "destination": "index.js"
-        },
-        {
-            "source": "/chat/(.*)",
-            "destination": "index.js"
-        },
-        {
-            "source": "/message/(.*)",
-            "destination": "index.js"
-        }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/auth/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/user/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/posts/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/upload/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/chat/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/message/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "index.js"
+    }
+  ]
 }
